@@ -171,9 +171,9 @@ text_gibberish = 'Please send me a valid command. Valid commands are: \n\n* Send
 text_gibberish_admin = text_gibberish + '\n\nValid admin commands are: \n\n* Send out submissions: have the subject as "shuffle and send"\n\nAdditionally, all admins can issue "check submission" and "remove submission" commands for any user, just change the body to the user whose submission you want to check or remove.'
 
 # Main
-messages = r.get_unread()
-
 while True:
+	messages = r.get_unread()
+	
 	for message in messages:
 		perform_action(message)	
 		message.mark_as_read()
